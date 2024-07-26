@@ -1,8 +1,8 @@
-package com.loose.coupling;
+package com.example.loose.coupling;
 
 public class UserDetails {
 
-    public UserDataProvider userDataProvider;
+    private UserDataProvider userDataProvider;
 
     public UserDetails(UserDataProvider userDataProvider) {
         this.userDataProvider = userDataProvider;
@@ -11,4 +11,5 @@ public class UserDetails {
     public String getUser() {
         return userDataProvider.getUserDetails();
     }
+
 }

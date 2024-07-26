@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="Specs" class="com.example.constructor.injector.Specs">
+        <property name="color" value="Red" />
+        <property name="topSpeed" value="200km/h" />
+        <property name="capacity" value="100" />
+    </bean>
+
+    <bean id="Car" class="com.example.constructor.injector.Car">
+        <constructor-arg ref="Specs" />
+        <property name="model" value="polo" />
+    </bean>
+
+</beans>
